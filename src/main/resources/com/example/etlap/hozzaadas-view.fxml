@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.etlap.HozzaadasViewController"
-            prefHeight="400.0" prefWidth="600.0">
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="44.0" prefWidth="600.0">
+         <children>
+            <Label text="Név">
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin></Label>
+            <TextField prefHeight="25.0" prefWidth="290.0" promptText="Név">
+               <HBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </HBox.margin></TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <Label text="Leírás">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Label>
+            <TextField prefHeight="82.0" prefWidth="277.0" promptText="Leírás">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin></TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="48.0" prefWidth="600.0">
+         <children>
+            <Label text="Kategória">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Label>
+            <ChoiceBox prefHeight="25.0" prefWidth="231.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin></ChoiceBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="51.0" prefWidth="403.0">
+         <children>
+            <Label text="Ár">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Label>
+            <Spinner prefHeight="25.0" prefWidth="254.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin></Spinner>
+         </children>
+      </HBox>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="253.0" text="Hozzáad">
+         <VBox.margin>
+            <Insets left="60.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>
