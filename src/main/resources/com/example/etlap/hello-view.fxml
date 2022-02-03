@@ -21,16 +21,16 @@
       <Accordion>
          <panes>
             <TitledPane animated="false" prefHeight="151.0" prefWidth="570.0" text="Áremelés">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="150.0">
-                     <children>
-                        <Spinner layoutX="15.0" fx:id="forintSP"/>
-                        <Spinner layoutX="15.0" layoutY="30.0" fx:id="szazalekSP"/>
-                        <Label layoutX="165.0" layoutY="30.0" text="Ft" />
-                        <Label layoutX="165.0" text="%" />
-                        <Button layoutX="200.0" mnemonicParsing="false" text="Emelés" />
-                        <Button layoutX="200.0" layoutY="30.0" mnemonicParsing="false" text="Emelés" />
-                     </children></AnchorPane>
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="150.0">
+                        <children>
+                            <Spinner layoutX="15.0" fx:id="forintSP"/>
+                            <Spinner layoutX="15.0" layoutY="30.0" fx:id="szazalekSP"/>
+                            <Label layoutX="165.0" layoutY="30.0" text="Ft" />
+                            <Label layoutX="165.0" text="\%" />
+                            <Button layoutX="200.0" mnemonicParsing="false" text="Emelés" />
+                            <Button layoutX="200.0" layoutY="30.0" mnemonicParsing="false" text="Emelés" />
+                        </children></AnchorPane>
                   
               </content>
             </TitledPane>
