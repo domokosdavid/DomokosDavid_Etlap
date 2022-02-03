@@ -9,4 +9,5 @@ public class Adatbazis extends AdatbazisController{
     public Adatbazis() throws SQLException {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/etlapdb", "root", "");
     }
+
 }
