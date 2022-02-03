@@ -27,5 +27,13 @@ public class Adatbazis extends AdatbazisController{
         }
         return etelek;
     }
+    public int etelHozzaadas(String nev, String leiras, int ar, int kategoria) throws SQLException {
+        PreparedStatement statement = connection.prepareStatement("INSERT INTO etlap(nev, leiras, ar, kategoria_id) VALUES(?,?,?,?)");
+        statement.setString(1, nev);
+        statement.setString(2, leiras);
+        statement.setInt(3, ar);
+        statement.setInt(4, kategoria);
+        return statement.executeUpdate();
+    }
 
 }
