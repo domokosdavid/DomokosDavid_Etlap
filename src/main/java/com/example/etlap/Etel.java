@@ -4,7 +4,7 @@ public class Etel {
     private int id, ar, kategoriaid;
     private String nev, leiras, kategoria;
 
-    public Etel(int id, int ar, int kategoriaid, String nev, String leiras, String kategoria) {
+    public Etel(int id, String nev, String leiras, int ar, String kategoria, int kategoriaId) {
         this.id = id;
         this.ar = ar;
         this.kategoriaid = kategoriaid;
