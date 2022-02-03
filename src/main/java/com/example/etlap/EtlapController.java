@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.util.List;
+
 public class EtlapController {
     @FXML
     private TableView<Etel> etelTableView;
@@ -15,6 +17,12 @@ public class EtlapController {
     private TextField textFieldKivalaszt;
     @FXML
     private Spinner<Integer> szazalekSP, forintSP;
+    @FXML
+    private ChoiceBox<Kategoria> kategoriaChoiceBox;
+    @FXML
+    private List<Kategoria> kategorias;
+    @FXML
+    private Adatbazis adatbazis;
 
 
 
