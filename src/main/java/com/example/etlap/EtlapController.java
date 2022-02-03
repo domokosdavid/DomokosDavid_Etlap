@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -38,15 +39,7 @@ public class EtlapController extends foController{
 
         try {
             adatbazis = new Adatbazis();
-            try {
-                List<Etel> etelList = adatbazis.getEtelek();
-                etelTableView.getItems().clear();
-                for (Etel item : etelList) {
-                    etelTableView.getItems().add(item);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            feltoltes();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -71,15 +64,7 @@ public class EtlapController extends foController{
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                 int rendezesKatId = kategorias.get(t1.intValue()).getId();
                 if (rendezesKatId == 0){
-                    try {
-                        List<Etel> etelList = adatbazis.getEtelek();
-                        etelTableView.getItems().clear();
-                        for (Etel item : etelList) {
-                            etelTableView.getItems().add(item);
-                        }
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+                    feltoltes();
                 }else{
                     etelTableView.getItems().clear();
                 }
@@ -87,13 +72,28 @@ public class EtlapController extends foController{
         });
 
 
+    }
 
-
-
+    public void feltoltes(){
+        try {
+            List<Etel> etelList = adatbazis.getEtelek();
+            etelTableView.getItems().clear();
+            for (Etel item : etelList) {
+                etelTableView.getItems().add(item);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void felvetelButton(ActionEvent actionEvent) {
-
+        try {
+            foController ujFelvetel = ujWindow("hozzaadas-view.fxml", "Hozzáadás", 370, 270);
+            ujFelvetel.getStage().setOnCloseRequest(windowEvent -> feltoltes());
+            ujFelvetel.getStage().show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void torlesButton(ActionEvent actionEvent) {
