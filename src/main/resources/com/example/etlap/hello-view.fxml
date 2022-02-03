@@ -24,10 +24,10 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="150.0">
                      <children>
-                        <Spinner layoutX="15.0" />
-                        <Spinner layoutX="15.0" layoutY="30.0" />
+                        <Spinner layoutX="15.0" fx:id="forintSP"/>
+                        <Spinner layoutX="15.0" layoutY="30.0" fx:id="szazalekSP"/>
                         <Label layoutX="165.0" layoutY="30.0" text="Ft" />
-                        <Label layoutX="165.0" text="\%" />
+                        <Label layoutX="165.0" text="%" />
                         <Button layoutX="200.0" mnemonicParsing="false" text="Emelés" />
                         <Button layoutX="200.0" layoutY="30.0" mnemonicParsing="false" text="Emelés" />
                      </children></AnchorPane>
@@ -37,14 +37,14 @@
          </panes>
       </Accordion>
       <HBox prefHeight="100.0" prefWidth="200.0" />
-      <TableView prefHeight="200.0" prefWidth="200.0">
+      <TableView prefHeight="200.0" prefWidth="200.0" fx:id="etelTableView">
         <columns>
-          <TableColumn minWidth="40.0" prefWidth="200.0" text="Név" />
-          <TableColumn minWidth="40.0" prefWidth="120.0" text="Kategória" />
-            <TableColumn minWidth="40.0" prefWidth="100.0" text="Ár (Ft)" />
+          <TableColumn minWidth="40.0" prefWidth="200.0" text="Név" fx:id="columnNev"/>
+          <TableColumn minWidth="40.0" prefWidth="120.0" text="Kategória" fx:id="columnKategoria" />
+            <TableColumn minWidth="40.0" prefWidth="100.0" text="Ár (Ft)" fx:id="columnAr"/>
         </columns>
       </TableView>
-      <TextField prefHeight="94.0" prefWidth="600.0" />
+      <TextField prefHeight="94.0" prefWidth="600.0" fx:id="textFieldKivalaszt"/>
    </children>
    <padding>
       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
